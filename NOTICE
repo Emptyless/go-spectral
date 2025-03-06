@@ -1,0 +1,468 @@
+NOTICE
+see dist/oss-licenses.json and dist/built.js.LICENSE.txt for more informationbelow are dependencies including their author and the corresponding license that are (partially) included in the dist/built.js as compiled by Webpack
+
+@asyncapi/specs (by Fran Mendez <fmvilas@gmail.com>): Apache-2.0
+repository: git+https://github.com/asyncapi/spec-json-schemas.git
+
+@jsep-plugin/regex (by Shelly (https://github.com/6utt3rfly)): MIT
+repository: EricSmekens/jsep
+
+@jsep-plugin/ternary (by Shelly (https://github.com/6utt3rfly)): MIT
+repository: EricSmekens/jsep
+
+@nodelib/fs.scandir: MIT
+repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.scandir
+
+@nodelib/fs.stat: MIT
+repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.stat
+
+@nodelib/fs.walk: MIT
+repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.walk
+
+@rollup/plugin-commonjs (by Rich Harris <richard.a.harris@gmail.com>): MIT
+repository: rollup/plugins
+
+@rollup/pluginutils (by Rich Harris <richard.a.harris@gmail.com>): MIT
+repository: rollup/plugins
+
+@stoplight/better-ajv-errors (by Rifat Nabi <to.rifat@gmail.com>): Apache-2.0
+repository: stoplightio/better-ajv-errors
+
+@stoplight/json (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/json
+
+@stoplight/json-ref-readers (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/json-ref-readers.git
+
+@stoplight/json-ref-resolver (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/json-ref-resolver.git
+
+@stoplight/ordered-object-literal (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/ordered-object-literal
+
+@stoplight/path (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/path
+
+@stoplight/spectral-cli (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-core (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral
+
+@stoplight/spectral-formats (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral
+
+@stoplight/spectral-formatters (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-functions (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral
+
+@stoplight/spectral-parsers (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-ref-resolver (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-ruleset-bundler (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-ruleset-migrator (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-rulesets (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/spectral-runtime (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/spectral.git
+
+@stoplight/types (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/types.git
+
+@stoplight/types (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/types.git
+
+@stoplight/types (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/types.git
+
+@stoplight/yaml (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/yaml
+
+@stoplight/yaml (by Stoplight <support@stoplight.io>): Apache-2.0
+repository: https://github.com/stoplightio/yaml
+
+@stoplight/yaml-ast-parser: Apache-2.0
+repository: https://github.com/stoplightio/yaml-ast-parser.git
+
+@stoplight/yaml-ast-parser: Apache-2.0
+repository: https://github.com/stoplightio/yaml-ast-parser.git
+
+abort-controller (by Toru Nagashima (https://github.com/mysticatea)): MIT
+repository: git+https://github.com/mysticatea/abort-controller.git
+
+ajv (by Evgeny Poberezkin): MIT
+repository: ajv-validator/ajv
+
+ajv-draft-04 (by Evgeny Poberezkin): MIT
+repository: git+https://github.com/ajv-validator/ajv-draft-04.git
+
+ajv-errors: MIT
+repository: git+https://github.com/epoberezkin/ajv-errors.git
+
+ajv-formats (by Evgeny Poberezkin): MIT
+repository: git+https://github.com/ajv-validator/ajv-formats.git
+
+ansi-regex (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: chalk/ansi-regex
+
+ansi-styles (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: chalk/ansi-styles
+
+ast-types (by Ben Newman <bn@cs.stanford.edu>): MIT
+repository: git://github.com/benjamn/ast-types.git
+
+astring (by David Bonnet <david@bonnet.cc>): MIT
+repository: https://github.com/davidbonnet/astring.git
+
+balanced-match (by Julian Gruber <mail@juliangruber.com> (http://juliangruber.com)): MIT
+repository: git://github.com/juliangruber/balanced-match.git
+
+brace-expansion (by Julian Gruber <mail@juliangruber.com> (http://juliangruber.com)): MIT
+repository: git://github.com/juliangruber/brace-expansion.git
+
+braces (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: micromatch/braces
+
+builtins: MIT
+repository: juliangruber/builtins
+
+call-bind (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/call-bind.git
+
+call-bind-apply-helpers (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/call-bind-apply-helpers.git
+
+call-bound (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/call-bound.git
+
+chalk: MIT
+repository: chalk/chalk
+
+cliui (by Ben Coe <ben@npmjs.com>): ISC
+repository: yargs/cliui
+
+color-convert (by Heather Arthur <fayearthur@gmail.com>): MIT
+repository: Qix-/color-convert
+
+color-name (by DY <dfcreative@gmail.com>): MIT
+repository: git@github.com:colorjs/color-name.git
+
+commondir (by James Halliday <mail@substack.net> (http://substack.net)): MIT
+repository: http://github.com/substack/node-commondir.git
+
+concat-map (by James Halliday <mail@substack.net> (http://substack.net)): MIT
+repository: git://github.com/substack/node-concat-map.git
+
+define-data-property (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/define-data-property.git
+
+define-properties (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git://github.com/ljharb/define-properties.git
+
+dependency-graph (by Jim Riecken <jriecken@gmail.com>): MIT
+repository: git://github.com/jriecken/dependency-graph.git
+
+dunder-proto (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/es-shims/dunder-proto.git
+
+emoji-regex (by Mathias Bynens (https://mathiasbynens.be/)): MIT
+repository: https://github.com/mathiasbynens/emoji-regex.git
+
+es-abstract (by Jordan Harband <ljharb@gmail.com> (http://ljharb.codes)): MIT
+repository: git://github.com/ljharb/es-abstract.git
+
+es-aggregate-error (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/es-shims/AggregateError.git
+
+es-define-property (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/es-define-property.git
+
+es-errors (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/es-errors.git
+
+es-object-atoms (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/es-object-atoms.git
+
+estree-walker (by Rich Harris): MIT
+repository: https://github.com/Rich-Harris/estree-walker
+
+event-target-shim (by Toru Nagashima): MIT
+repository: https://github.com/mysticatea/event-target-shim.git
+
+fast-deep-equal (by Evgeny Poberezkin): MIT
+repository: git+https://github.com/epoberezkin/fast-deep-equal.git
+
+fast-glob (by Denis Malinochkin (https://mrmlnc.com)): MIT
+repository: mrmlnc/fast-glob
+
+fast-memoize (by Caio Gondim <me@caiogondim.com> (http://caiogondim.com)): MIT
+repository: git+https://github.com/caiogondim/fast-memoize.git
+
+fast-uri (by Vincent Le Goff <vince.legoff@gmail.com> (https://github.com/zekth)): BSD-3-Clause
+repository: git+https://github.com/fastify/fast-uri.git
+
+fastq (by Matteo Collina <hello@matteocollina.com>): ISC
+repository: git+https://github.com/mcollina/fastq.git
+
+fill-range (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: jonschlinkert/fill-range
+
+fs-extra (by JP Richardson <jprichardson@gmail.com>): MIT
+repository: https://github.com/jprichardson/node-fs-extra
+
+fs.realpath (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)): ISC
+repository: git+https://github.com/isaacs/fs.realpath.git
+
+fsevents: MIT
+repository: https://github.com/fsevents/fsevents.git
+
+function-bind (by Raynos <raynos2@gmail.com>): MIT
+repository: https://github.com/Raynos/function-bind.git
+
+functions-have-names (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/inspect-js/functions-have-names.git
+
+get-intrinsic (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/get-intrinsic.git
+
+get-proto (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/get-proto.git
+
+glob (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)): ISC
+repository: git://github.com/isaacs/node-glob.git
+
+glob-parent (by Gulp Team <team@gulpjs.com> (https://gulpjs.com/)): ISC
+repository: gulpjs/glob-parent
+
+globalthis (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git://github.com/ljharb/System.global.git
+
+gopd (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/gopd.git
+
+graceful-fs: ISC
+repository: https://github.com/isaacs/node-graceful-fs
+
+has-flag (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: sindresorhus/has-flag
+
+has-property-descriptors (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/inspect-js/has-property-descriptors.git
+
+has-proto (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/inspect-js/has-proto.git
+
+has-symbols (by Jordan Harband <ljharb@gmail.com> (http://ljharb.codes)): MIT
+repository: git://github.com/inspect-js/has-symbols.git
+
+has-tostringtag (by Jordan Harband <ljharb@gmail.com> (http://ljharb.codes)): MIT
+repository: git+https://github.com/inspect-js/has-tostringtag.git
+
+hasown (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/inspect-js/hasOwn.git
+
+immer (by Michel Weststrate): MIT
+repository: https://github.com/immerjs/immer.git
+
+inflight (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)): ISC
+repository: https://github.com/npm/inflight.git
+
+inherits: ISC
+repository: git://github.com/isaacs/inherits
+
+internal-slot (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/internal-slot.git
+
+is-callable (by Jordan Harband <ljharb@gmail.com> (http://ljharb.codes)): MIT
+repository: git://github.com/inspect-js/is-callable.git
+
+is-extglob (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: jonschlinkert/is-extglob
+
+is-fullwidth-code-point (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: sindresorhus/is-fullwidth-code-point
+
+is-glob (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: micromatch/is-glob
+
+is-number (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: jonschlinkert/is-number
+
+is-reference (by Rich Harris): MIT
+repository: git+https://github.com/Rich-Harris/is-reference.git
+
+is-string (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git://github.com/inspect-js/is-string.git
+
+jsep (by Stephen Oney <swloney@gmail.com> (http://from.so/)): MIT
+repository: https://github.com/EricSmekens/jsep.git
+
+json-schema-traverse (by Evgeny Poberezkin): MIT
+repository: git+https://github.com/epoberezkin/json-schema-traverse.git
+
+jsonc-parser (by Microsoft Corporation): MIT
+repository: https://github.com/microsoft/node-jsonc-parser
+
+jsonfile (by JP Richardson <jprichardson@gmail.com>): MIT
+repository: git@github.com:jprichardson/node-jsonfile.git
+
+jsonpath-plus (by Stefan Goessner): MIT
+repository: git://github.com/s3u/JSONPath.git
+
+jsonpointer (by Jan Lehnardt <jan@apache.org>): MIT
+repository: https://github.com/janl/node-jsonpointer.git
+
+leven (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: sindresorhus/leven
+
+lodash (by John-David Dalton <john.david.dalton@gmail.com>): MIT
+repository: lodash/lodash
+
+lodash.topath (by John-David Dalton <john.david.dalton@gmail.com> (http://allyoucanleet.com/)): MIT
+repository: lodash/lodash
+
+magic-string (by Rich Harris): MIT
+repository: https://github.com/rich-harris/magic-string
+
+markdown-escape (by Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)): MIT
+repository: kemitchell/markdown-escape.js
+
+math-intrinsics (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/es-shims/math-intrinsics.git
+
+merge2: MIT
+repository: git@github.com:teambition/merge2.git
+
+micromatch (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: micromatch/micromatch
+
+minimatch (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)): ISC
+repository: git://github.com/isaacs/minimatch.git
+
+nimma (by P0lip): Apache-2.0
+repository: https://github.com/P0lip/nimma
+
+node-fetch (by David Frank): MIT
+repository: https://github.com/bitinn/node-fetch.git
+
+node-sarif-builder: MIT
+repository: https://github.com/nvuillam/node-sarif-builder
+
+object-inspect (by James Halliday <mail@substack.net> (http://substack.net)): MIT
+repository: git://github.com/inspect-js/object-inspect.git
+
+object-keys (by Jordan Harband <ljharb@gmail.com> (http://ljharb.codes)): MIT
+repository: git://github.com/ljharb/object-keys.git
+
+once (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)): ISC
+repository: git://github.com/isaacs/once
+
+path-is-absolute (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: sindresorhus/path-is-absolute
+
+picomatch (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: micromatch/picomatch
+
+pony-cause (by Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)): 0BSD
+repository: git://github.com/voxpelli/pony-cause.git
+
+queue-microtask (by Feross Aboukhadijeh <feross@feross.org> (https://feross.org)): MIT
+repository: git://github.com/feross/queue-microtask.git
+
+reserved (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: git://github.com/jonschlinkert/reserved.git
+
+reusify (by Matteo Collina <hello@matteocollina.com>): MIT
+repository: git+https://github.com/mcollina/reusify.git
+
+rollup (by Rich Harris): MIT
+repository: rollup/rollup
+
+run-parallel (by Feross Aboukhadijeh <feross@feross.org> (https://feross.org)): MIT
+repository: git://github.com/feross/run-parallel.git
+
+safe-stable-stringify (by Ruben Bridgewater): MIT
+repository: git+https://github.com/BridgeAR/safe-stable-stringify.git
+
+set-function-length (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/set-function-length.git
+
+set-function-name (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/set-function-name.git
+
+set-proto (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/set-proto.git
+
+side-channel (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/side-channel.git
+
+side-channel-list (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/side-channel-list.git
+
+side-channel-map (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/side-channel-map.git
+
+side-channel-weakmap (by Jordan Harband <ljharb@gmail.com>): MIT
+repository: git+https://github.com/ljharb/side-channel-weakmap.git
+
+simple-eval (by Jakub Rożek): MIT
+repository: https://github.com/P0lip/simple-eval
+
+sourcemap-codec (by Rich Harris): MIT
+repository: https://github.com/Rich-Harris/sourcemap-codec
+
+string-width (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: sindresorhus/string-width
+
+strip-ansi (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: chalk/strip-ansi
+
+supports-color (by Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)): MIT
+repository: chalk/supports-color
+
+text-table (by James Halliday <mail@substack.net> (http://substack.net)): MIT
+repository: git://github.com/substack/text-table.git
+
+to-regex-range (by Jon Schlinkert (https://github.com/jonschlinkert)): MIT
+repository: micromatch/to-regex-range
+
+tr46 (by Sebastian Mayr <npm@smayr.name>): MIT
+repository: git+https://github.com/Sebmaster/tr46.js.git
+
+tslib (by Microsoft Corp.): 0BSD
+repository: https://github.com/Microsoft/tslib.git
+
+tslib (by Microsoft Corp.): 0BSD
+repository: https://github.com/Microsoft/tslib.git
+
+universalify (by Ryan Zimmerman <opensrc@ryanzim.com>): MIT
+repository: git+https://github.com/RyanZim/universalify.git
+
+urijs (by Rodney Rehm (http://rodneyrehm.de)): MIT
+repository: https://github.com/medialize/URI.js.git
+
+validate-npm-package-name (by zeke): ISC
+repository: https://github.com/npm/validate-npm-package-name
+
+webidl-conversions (by Domenic Denicola <d@domenic.me> (https://domenic.me/)): BSD-2-Clause
+repository: jsdom/webidl-conversions
+
+whatwg-url (by Sebastian Mayr <github@smayr.name>): MIT
+repository: jsdom/whatwg-url
+
+wrap-ansi (by Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)): MIT
+repository: chalk/wrap-ansi
+
+wrappy (by Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)): ISC
+repository: https://github.com/npm/wrappy
+
