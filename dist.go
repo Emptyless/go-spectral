@@ -1,7 +1,7 @@
 package gospectral
 
 import (
-	_ "embed"
+	"embed"
 
 	"github.com/dop251/goja_nodejs/require"
 )
@@ -12,6 +12,11 @@ const DistName = "./dist/built.js"
 
 //go:embed dist/built.js
 var dist []byte
+
+// Licenses includes the built.js.LICENSE.txt and oss-licenses.json file produced by Webpack for the dist
+//
+//go:embed dist/built.js.LICENSE.txt dist/oss-licenses.json
+var Licenses embed.FS
 
 // DefaultDist returning the transpiled source with the library
 func DefaultDist() []byte {
