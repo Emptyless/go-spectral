@@ -60,3 +60,7 @@ To customise the behavior of `Lint`, additional options can be supplied:
 - [dop251/goja](https://github.com/dop251/goja): Go ECMAScript 5.1 Implementation
 - [dop251/goja_nodejs](https://github.com/dop251/goja_nodejs): Goja implementations of NodeJS packages
 
+# Notice
+
+See `./NOTICE` for the NOTICE as produced by the `webpack-license-plugin` for `dist/built.js`
+

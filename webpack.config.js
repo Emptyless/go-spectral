@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import path from 'path';
+import LicensePlugin from 'webpack-license-plugin'
 
 export default {
     entry: "./index.js",
@@ -12,6 +13,31 @@ export default {
     plugins: [
         new webpack.optimize.LimitChunkCountPlugin({
             maxChunks: 1
+        }),
+        new LicensePlugin({
+            additionalFiles: {
+                '../NOTICE': (pkgs) => {
+                    let res = "NOTICE\n"
+                    res += "see dist/oss-licenses.json and dist/built.js.LICENSE.txt for more information"
+                    res += "below are dependencies including their author and the corresponding license that are (partially) included in the dist/built.js as compiled by Webpack\n"
+                    res += "\n"
+                    for (let pkg of pkgs) {
+                        res += pkg['name']
+                        if (pkg['author']) {
+                            res += ` (by ${pkg['author']})`
+                        }
+                        res += `: ${pkg['license']}\n`
+                        res += `repository: ${pkg['repository']}\n`
+                        res += "\n"
+                    }
+                    return res
+                }
+            },
+            includeNoticeText: true,
+            unacceptableLicenseTest: (licenseIdentifier) => {
+                // only allow the following licenses
+                return !['MIT', 'Apache-2.0', 'ISC', 'BSD-3-Clause', 'BSD-2-Clause', '0BSD'].includes(licenseIdentifier)
+            }
         })
     ],
     optimization: {
