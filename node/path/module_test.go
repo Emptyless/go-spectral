@@ -100,7 +100,7 @@ func TestRequire(t *testing.T) {
 	_ = module.Set("exports", exports)
 
 	// Act
-	Require(r, module)
+	Require("")(r, module)
 
 	// Assert
 	assert.NotNil(t, exports.Get("posix"))
@@ -119,7 +119,7 @@ func TestEnable(t *testing.T) {
 	requireModule := registry.Enable(r)
 
 	// Act
-	Enable(r, registry, requireModule)
+	Enable(r, registry, requireModule, "")
 
 	// Assert
 	res, err := requireModule.Require(ModuleName)
