@@ -31,7 +31,7 @@ func (p *Path) Resolve(call goja.FunctionCall) goja.Value {
 		return goja.Undefined()
 	}
 
-	res := ""
+	var res string
 	for _, arg := range call.Arguments {
 		stringarg := arg.String()
 		if path.IsAbs(stringarg) {
