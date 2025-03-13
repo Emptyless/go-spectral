@@ -45,7 +45,7 @@ type Enable struct {
 type BeforeModule = func(enable Enable, runtime *goja.Runtime, registry *noderequire.Registry, requireModule *noderequire.RequireModule) (func(runtime *goja.Runtime, registry *noderequire.Registry, requireModule *noderequire.RequireModule), error)
 
 // DefaultBeforeModule implementation of BeforeModule is constructed using a curried function containing the working directory and a possibly virtual filesystem
-func DefaultBeforeModule(currentWorkingDirectory string, fileSystem fs.FS) BeforeModule {
+func DefaultBeforeModule(currentWorkingDirectory string, fileSystem fs.FS, printer console.Printer) BeforeModule {
 	return func(enable Enable, _ *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) (func(runtime *goja.Runtime, registry *noderequire.Registry, requireModule *noderequire.RequireModule), error) {
 		switch enable.Name {
 		case process.ModuleName:
@@ -55,6 +55,18 @@ func DefaultBeforeModule(currentWorkingDirectory string, fileSystem fs.FS) Befor
 		case nodefs.ModuleName:
 			return func(runtime *goja.Runtime, registry *noderequire.Registry, requireModule *noderequire.RequireModule) {
 				nodefs.Enable(runtime, registry, requireModule, currentWorkingDirectory, fileSystem)
+			}, nil
+		case path.ModuleName:
+			return func(runtime *goja.Runtime, registry *noderequire.Registry, requireModule *noderequire.RequireModule) {
+				path.Enable(runtime, registry, requireModule, currentWorkingDirectory)
+			}, nil
+		case console.ModuleName:
+			return func(runtime *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
+				if printer != nil {
+					_ = runtime.Set(console.ModuleName, console.RequireWithPrinter(printer))
+				}
+
+				console.Enable(runtime)
 			}, nil
 		default:
 			return enable.Fn, nil
@@ -99,8 +111,8 @@ func Enables() []Enable {
 			panic(process.ModuleName + " relies on working directory and FS and must be provided with a BeforeLoader")
 		}},
 		{Name: vm.ModuleName, Fn: vm.Enable},
-		{Name: console.ModuleName, Fn: func(runtime *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
-			console.Enable(runtime)
+		{Name: console.ModuleName, Fn: func(_ *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
+			panic(console.ModuleName + " relies on a Printer and must be provided with a BeforeLoader")
 		}},
 		{Name: process.ModuleName, Fn: func(_ *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
 			panic(process.ModuleName + " relies on working directory and must be provided with a BeforeLoader")
@@ -109,7 +121,9 @@ func Enables() []Enable {
 		{Name: perfhooks.ModuleName, Fn: perfhooks.Enable},
 		{Name: crypto.ModuleName, Fn: crypto.Enable},
 		{Name: assert.ModuleName, Fn: assert.Enable},
-		{Name: path.ModuleName, Fn: path.Enable},
+		{Name: path.ModuleName, Fn: func(_ *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
+			panic(path.ModuleName + " relies on working directory and must be provided with a BeforeLoader")
+		}},
 		{Name: osmodule.ModuleName, Fn: osmodule.Enable},
 		{Name: buffer.ModuleName, Fn: func(runtime *goja.Runtime, _ *noderequire.Registry, _ *noderequire.RequireModule) {
 			buffer.Enable(runtime)

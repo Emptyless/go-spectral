@@ -6,13 +6,17 @@ import (
 	"fmt"
 	"io/fs"
 	"os"
+	"path"
+	"path/filepath"
 	"reflect"
 	"strings"
 	"sync"
 	"unsafe"
 
 	"github.com/dop251/goja"
+	"github.com/dop251/goja_nodejs/console"
 	noderequire "github.com/dop251/goja_nodejs/require"
+	"github.com/sirupsen/logrus"
 )
 
 // Config to instantiate the runner
@@ -34,6 +38,9 @@ type Config struct {
 	// in the FS, continue the search relative to the WorkingDirectory. This mechanism allows to bundle static files
 	// (e.g. rulesets) and also have a runtime component.
 	FS fs.FS
+
+	// Printer used for console output
+	Printer console.Printer
 
 	// WorkingDirectory, defaults to os.Getcwd() if ""
 	WorkingDirectory string
@@ -90,6 +97,7 @@ func Lint(documents []string, ruleset string, options ...Option) (Output, error)
 		Script:       DefaultScript(),
 		BeforeModule: nil,
 		AfterModule:  nil,
+		Printer:      nil,
 	}
 
 	// apply Option's
@@ -107,17 +115,24 @@ func Lint(documents []string, ruleset string, options ...Option) (Output, error)
 		}
 
 		cfg.WorkingDirectory = wd
+	} else if !path.IsAbs(cfg.WorkingDirectory) {
+		cwdAbs, err := filepath.Abs(cfg.WorkingDirectory)
+		if err != nil {
+			return nil, err
+		}
+
+		cfg.WorkingDirectory = cwdAbs
 	}
 
 	// Set default BeforeModule if nil such that node:fs and node:process can use the working directory and/or virtual file system
 	if cfg.BeforeModule == nil {
-		cfg.BeforeModule = DefaultBeforeModule(cfg.WorkingDirectory, cfg.FS)
+		cfg.BeforeModule = DefaultBeforeModule(cfg.WorkingDirectory, cfg.FS, cfg.Printer)
 	}
 
 	// initiate runtime with NodeJS modules
 	runtime := goja.New()
 	registry := noderequire.NewRegistry(noderequire.WithLoader(func(path string) ([]byte, error) {
-		if path == DistName {
+		if filepath.Clean(path) == filepath.Clean(DistName) {
 			return cfg.Dist, nil
 		}
 
@@ -193,6 +208,49 @@ func WithFS(fs fs.FS) Option {
 	return func(config *Config) error {
 		config.FS = fs
 
+		return nil
+	}
+}
+
+// LogrusPrinter is an adapter from logrus.Logger to console.Printer
+type LogrusPrinter struct {
+	logger *logrus.Logger
+}
+
+// Log to logrus.Info
+func (l LogrusPrinter) Log(s string) {
+	if l.logger == nil {
+		logrus.Info(s)
+		return
+	}
+
+	l.logger.Info(s)
+}
+
+// Warn to logrus.Warn
+func (l LogrusPrinter) Warn(s string) {
+	if l.logger == nil {
+		logrus.Warn(s)
+		return
+	}
+
+	l.logger.Warn(s)
+}
+
+// Error to logrus.Error
+func (l LogrusPrinter) Error(s string) {
+	if l.logger == nil {
+		logrus.Error(s)
+		return
+	}
+
+	l.logger.Error(s)
+}
+
+// WithLogrus uses a logrus.Logger (or if nil, the global logrus.Logger) for console output produced by goja
+func WithLogrus(logger *logrus.Logger) Option {
+	return func(config *Config) error {
+		config.Printer = &LogrusPrinter{logger: logger}
 		return nil
 	}
 }

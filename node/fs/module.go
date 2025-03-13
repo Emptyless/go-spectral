@@ -180,7 +180,7 @@ func (f *FS) openFile(filePath string) (fs.File, error) {
 
 		file, openErr := f.FileSystem.Open(rel)
 		if openErr != nil {
-			logrus.Warnf("fs.Open: failed to open file from embedded FileSystem: %v\n", openErr)
+			logrus.Debugf("fs.Open: failed to open file from embedded FileSystem: %v\n", openErr)
 		} else {
 			return file, nil
 		}
